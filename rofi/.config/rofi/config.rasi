@@ -1,0 +1,8 @@
+configuration {
+  modes: [ combi, run ];
+  combi-modes: [ window, drun, run ];
+  show-icons: true;
+}
+
+@theme "squared-nord"
+ 
