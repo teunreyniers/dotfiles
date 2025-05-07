@@ -108,4 +108,3 @@ eval "$(zoxide init zsh)"
 alias ll='ls -la'
 alias gs='git status'
 
-neofetch
