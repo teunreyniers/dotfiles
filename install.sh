@@ -1,4 +1,4 @@
-#!/bin/bash
+# /bin/bash
 # Install basic packages
 sudo pacman -S --noconfirm --needed git tree stow less zip unzip zsh firefox ttf-jetbrains-mono ttf-jetbrains-mono-nerd jq waybar base-devel rofi-wayland alacritty zoxide
 sudo pacman -S --noconfirm --needed gcc make git ripgrep fd unzip neovim
@@ -23,9 +23,14 @@ if [ ! -d "$HOME/.oh-my-zsh" ]; then
 fi
 
 if [ ! -d "$HOME/.config/alacritty/themes" ]; then
-mkdir -p $HOME/.config/alacritty/themes
-git clone https://github.com/alacritty/alacritty-theme $HOME/.config/alacritty/themes
+    mkdir -p $HOME/.config/alacritty/themes
+    git clone https://github.com/alacritty/alacritty-theme $HOME/.config/alacritty/themes
+fi
 
+if [ ! -d "$HOME/.oh-my-zsh/custom/plugins/zsh-vi-mode" ]; then
+    mkdir -p $HOME/.oh-my-zsh/custom/plugins/zsh-vi-mode
+    git clone https://github.com/jeffreytse/zsh-vi-mode $HOME/.oh-my-zsh/custom/plugins/zsh-vi-mode
+fi
 
 # AUR - yay
 if ! command -v yay &> /dev/null; then
@@ -36,7 +41,7 @@ if ! command -v yay &> /dev/null; then
 fi
 
 # Bluetooth
-if dmesg | grep -i bluetooth > /dev/null; then
+if sudo mesg | grep -i bluetooth > /dev/null; then
     sudo pacman -S --noconfirm --needed bluez bluez-utils
     sudo systemctl start bluetooth.service
     sudo systemctl enable bluetooth.service
