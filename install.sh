@@ -1,6 +1,6 @@
 #!/bin/bash
 # Install basic packages
-sudo pacman -S --noconfirm --needed git tree stow less zip unzip zsh firefox ttf-jetbrains-mono ttf-jetbrains-mono-nerd jq waybar base-devel rofi-wayland
+sudo pacman -S --noconfirm --needed git tree stow less zip unzip zsh firefox ttf-jetbrains-mono ttf-jetbrains-mono-nerd jq waybar base-devel rofi-wayland alacritty
 sudo pacman -S --noconfirm --needed gcc make git ripgrep fd unzip neovim
 
 # Configure git
@@ -22,11 +22,18 @@ if [ ! -d "$HOME/.oh-my-zsh" ]; then
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
+if [ ! -d "$HOME/.config/alacritty/themes" ]; then
+mkdir -p $HOME/.config/alacritty/themes
+git clone https://github.com/alacritty/alacritty-theme $HOME/.config/alacritty/themes
+
+
 # AUR - yay
-mkdir $HOME/git
-git clone https://aur.archlinux.org/yay.git $HOME/git/yay
-cd $HOME/git/yay
-makepkg -si
+if ! command -v yay &> /dev/null; then
+    mkdir $HOME/git
+    git clone https://aur.archlinux.org/yay.git $HOME/git/yay
+    cd $HOME/git/yay
+    makepkg -si
+fi
 
 # Bluetooth
 if dmesg | grep -i bluetooth > /dev/null; then
@@ -38,3 +45,4 @@ fi
 
 # Audio
 sudo pacman -S --noconfirm --needed helvum
+
