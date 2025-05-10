@@ -1,6 +1,6 @@
 # /bin/bash
 # Install basic packages
-sudo pacman -S --noconfirm --needed git tree stow less zip unzip zsh firefox ttf-jetbrains-mono ttf-jetbrains-mono-nerd jq waybar base-devel rofi-wayland alacritty zoxide
+sudo pacman -S --noconfirm --needed git tree stow less zip unzip zsh firefox ttf-jetbrains-mono ttf-jetbrains-mono-nerd jq waybar base-devel rofi-wayland alacritty zoxide polkit hyprpolkitagent
 sudo pacman -S --noconfirm --needed gcc make git ripgrep fd unzip neovim
 
 # Configure git

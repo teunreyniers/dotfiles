@@ -80,7 +80,7 @@ window#waybar {
 
 
 #clock{
-  color: #5fd1fa;
+  color: @foreground;
 }
 
 #battery.charging {
