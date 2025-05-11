@@ -1,6 +1,6 @@
 # /bin/bash
 # Install basic packages
-sudo pacman -S --noconfirm --needed git tree stow less zip unzip zsh firefox ttf-jetbrains-mono ttf-jetbrains-mono-nerd jq waybar base-devel rofi-wayland alacritty zoxide polkit hyprpolkitagent
+sudo pacman -S --noconfirm --needed git tree stow less zip unzip zsh firefox ttf-jetbrains-mono ttf-jetbrains-mono-nerd jq waybar base-devel rofi-wayland alacritty zoxide polkit hyprpolkitagent hyprpaper archlinux-xdg-menu dolphin
 sudo pacman -S --noconfirm --needed gcc make git ripgrep fd unzip neovim
 
 # Configure git
@@ -50,4 +50,7 @@ fi
 
 # Audio
 sudo pacman -S --noconfirm --needed helvum
+
+
+XDG_MENU_PREFIX=arch- kbuildsycoca6 --noincremental
 
