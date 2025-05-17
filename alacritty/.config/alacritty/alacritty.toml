@@ -7,4 +7,5 @@ import = [
 
 [window]
 opacity = 0.9
+blur = true
 padding = { x = 10, y = 10 }
