@@ -1,0 +1,8 @@
+[General]
+TerminalApplication=alacritty
+TerminalService=Alacritty.desktop
+
+[Colors:View]
+BackgroundNormal=#222222
+
+
