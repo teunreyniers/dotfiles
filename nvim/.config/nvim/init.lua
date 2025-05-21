@@ -100,6 +100,8 @@ vim.g.have_nerd_font = false
 
 -- Make line numbers default
 vim.opt.number = true
+-- Blue for normal line numbers
+
 -- You can also add relative line numbers, to help with jumping.
 --  Experiment for yourself to see if you like it!
 vim.opt.relativenumber = true
@@ -1063,3 +1065,5 @@ vim.api.nvim_set_hl(0, "TabLine", { bg = "NONE", ctermbg = "NONE" })
 vim.api.nvim_set_hl(0, "TabLineFill", { bg = "NONE", ctermbg = "NONE" })
 vim.api.nvim_set_hl(0, "TabLineSel", { bg = "NONE", ctermbg = "NONE" })
 vim.api.nvim_set_hl(0, "SignColumn", { bg = "NONE", ctermbg = "NONE" })
+vim.api.nvim_set_hl(0, "LineNrAbove", { fg = "#77CCDD" })
+vim.api.nvim_set_hl(0, "LineNrBelow", { fg = "#77CCDD" })
