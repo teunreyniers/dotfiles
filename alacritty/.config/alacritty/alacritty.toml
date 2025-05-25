@@ -1,4 +1,5 @@
-
+[terminal.shell]
+program = "tmux"
 
 [general]
 import = [
