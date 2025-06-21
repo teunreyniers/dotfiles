@@ -110,3 +110,5 @@ alias gs='git status'
 
 
 
+
+. "$HOME/.cargo/env"
